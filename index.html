@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link href="style.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Shade" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Offside" rel="stylesheet" />
+    <link href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css" rel="stylesheet" />
+</head>
+<body>
+    <nav id="navbar">
+  
+        <a id="welcome-button" href="#welcome-section">Welcome</a>
+        <a id="projects-button" href="#projects">Projects</a>
+        <a id="contact-button" href="#social">Contact</a>
+    
+    </nav>
+    
+    <section id="welcome-section">
+    
+        <h1 id="name" class="animated bounceIn"><strong>Chris Wingler</strong></h1>
+        <h2 id="job-description" class="animated bounceIn"><em>Software Engineer</em></h2>
+        
+        <div id="technologies" class="animated bounceIn">
+            <h3><i class="fab fa-js"></i></h3>
+            <h3><i class="fab fa-node"></i></h3>
+            <h3><i class="fab fa-vuejs"></i></h3>
+            <h3><i class="fab fa-react"></i></h3>
+            <h3><i class="fab fa-html5"></i></h3>
+            <h3><i class="fab fa-sass"></i></h3>
+        </div>
+    
+    </section>
+    
+    <section id="projects">
+        
+        <a><div class="project-tile"><iframe src="https://s.codepen.io/chriswingler/debug/zawxjE/dXMqBZdPwNor"></iframe></div></a>
+        <a><div class="project-tile"><iframe src="https://s.codepen.io/chriswingler/debug/vrbXLo/XxkVwaLeNzqM"></iframe></div></a>
+        <a><div class="project-tile"><iframe src="https://s.codepen.io/chriswingler/debug/mKVPjN/mVAbGpdoXYVk"></iframe></div></a>
+        
+    </section>
+    
+    <!--<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="background-color: green;">
+    <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" ></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item">
+        <a alt="First slide"><div class="project-tile"><iframe src="https://s.codepen.io/chriswingler/debug/zawxjE/dXMqBZdPwNor"></iframe></div></a>
+        </div>
+        <div class="carousel-item active">
+        <a alt="Second slide"><div class="project-tile"><iframe src="https://s.codepen.io/chriswingler/debug/vrbXLo/XxkVwaLeNzqM"></iframe></div></a>
+        </div>
+        <div class="carousel-item">
+        <a alt="Third slide"><div class="project-tile"><iframe src="https://s.codepen.io/chriswingler/debug/mKVPjN/mVAbGpdoXYVk"></iframe></div></a>
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+    </div>-->
+    
+    <section id="social">
+        
+        <a id="profile-link" href="https://www.linkedin.com/in/chris-wingler/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        
+        <a id="profile-link" href="https://github.com/chriswingler" target="_blank"><i class="fab fa-github"></i></a>
+        
+        <a id="profile-link" href="https://angel.co/chris-wingler-1" target="_blank"><i class="fab fa-angellist"></i></a>
+        
+        <a id="profile-link" href="https://www.freecodecamp.org/cwingler" target="_blank"><i class="fab fa-free-code-camp"></i></a>
+        
+        <a id="profile-link" href="mailto:chriswingler1986@gmail.com"><i class="far fa-envelope"></i></a>
+        
+        <a id="profile-link" href="https://stackoverflow.com/users/8617465/chris-wingler" target="_blank"><i class="fab fa-stack-overflow"></i></a>
+        
+    </section>
+      
+    <script>
+        let nav = document.getElementById('navbar');
+
+        const welcome = document.getElementById('welcome-button');
+
+        const projects = document.getElementById('projects-button');
+
+        const contact = document.getElementById('contact-button');
+
+        setInterval(() => {
+        if (document.documentElement.scrollTop < window.innerHeight) {
+            welcome.classList.add('b-active');
+            projects.classList.remove('b-active');
+            contact.classList.remove('b-active');
+        }
+        
+        if (document.documentElement.scrollTop >= window.innerHeight && document.documentElement.scrollTop <= window.innerHeight * 2) {
+            welcome.classList.remove('b-active');
+            projects.classList.add('b-active');
+            contact.classList.remove('b-active');
+        }
+        
+        if (document.documentElement.scrollTop > (window.innerHeight * 2) - 100) {
+            welcome.classList.remove('b-active');
+            projects.classList.remove('b-active');
+            contact.classList.add('b-active');
+        }
+        }, 10)
+    </script>
+
+    <!--<script src="https://gitcdn.link/repo/freeCodeCamp/testable-projects-fcc/master/build/bundle.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <!--<script async src="https://static.codepen.io/assets/embed/ei.js"></script> -->
+</body>
+</html>
