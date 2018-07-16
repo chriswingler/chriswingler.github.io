@@ -1,3 +1,8 @@
+  html {
+    background-color: #e8b2a0;
+    max-height: 300vh;
+  }
+
 .b-active {
     color: #008060 !important;
   }
@@ -72,18 +77,31 @@
     border-style: solid;
     border-radius: 5px;
   }
-  
-  #social {
+
+  #contact {
     height: 100vh;
     background-color: #e8b2a0;
     font-size: 15vw;
+  }
+  
+  #social {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    padding-top: 10vh;
+    padding-top: 20vh;
   }
   
   #social > a {
+    color: #006080;
+  }
+
+  #email-resume {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  #email-resume > a {
     color: #006080;
   }
   
