@@ -3,8 +3,13 @@
     max-height: 300vh;
   }
 
-.b-active {
-    color: #008060 !important;
+  ::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+  }
+
+  .b-active {
+      color: #008060 !important;
   }
   
   #navbar {
